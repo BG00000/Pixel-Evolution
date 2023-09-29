@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-container {
+    background-color: lightgray;
+    width: 700px; /* Adjust the initial size */
+    height: 700px; /* Adjust the initial size */
+    border: 1px solid rgb(0, 0, 0);
+    display: grid; /* Use CSS grid for better alignment */
+    grid-template-columns: repeat(var(--size, 10), 1fr); /* Use CSS custom property to set the number of columns */
+}
+
+.pixel {
+    background-color: rgb(211, 211, 211);
+    width: 100%; /* Fill the entire grid cell */
+    height: 100%; /* Fill the entire grid cell */
+
+}
