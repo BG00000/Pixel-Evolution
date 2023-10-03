@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#canvas {
+    background-color: rgb(201, 201, 201);
+    display: grid;
+}
+
+.pixel {
+    background-color: rgb(255, 205, 205);
+    border: 1px solid white;
+}
