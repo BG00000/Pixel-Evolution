@@ -2,7 +2,6 @@ const canvas = document.querySelector('#canvas')
 
 let pixel
 let mouseDown = false
-let mouseEnter = false
 
 //_-_-_-_-_-_-_-_-_-_-_-
 let pixelSize = '5px'
