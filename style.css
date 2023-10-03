@@ -11,11 +11,11 @@ body {
 }
 
 #canvas {
-    background-color: rgb(201, 201, 201);
+    background-color: rgb(255, 255, 255);
     display: grid;
+    gap: 2px;
 }
 
 .pixel {
-    background-color: rgb(255, 205, 205);
-    border: 1px solid white;
+    background-color: rgb(222, 201, 255);
 }

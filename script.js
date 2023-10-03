@@ -1,7 +1,14 @@
 const canvas = document.querySelector('#canvas')
 
-let pixelSize = '10px'
-let insertColumns = 30
+
+let pixel
+
+//_-_-_-_-_-_-_-_-_-_-_-
+let pixelSize = '30px'
+let insertColumns = 10
+let border = true
+//_-_-_-_-_-_-_-_-_-_-_-
+
 
 function numberOfColumns(columns) {
 
@@ -17,7 +24,7 @@ function numberOfColumns(columns) {
 function createGrid(num) {
 
     for (i = 0; i < num; i ++) {
-        let pixel = document.createElement('div')
+        pixel = document.createElement('div')
 
         pixel.classList.add('pixel')
 
@@ -25,6 +32,11 @@ function createGrid(num) {
         pixel.style.width = pixelSize
 
         canvas.appendChild(pixel)   
+
+        if (!border) {
+            canvas.style.gap = '0px'
+        }
+        
     }
 }
 
