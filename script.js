@@ -2,11 +2,12 @@ const canvas = document.querySelector('#canvas')
 
 
 let pixel
-
+let mouseDown = false
+let mouseEnter = false
 //_-_-_-_-_-_-_-_-_-_-_-
-let pixelSize = '30px'
+let pixelSize = '40px'
 let insertColumns = 10
-let border = true
+let border = false
 //_-_-_-_-_-_-_-_-_-_-_-
 
 
@@ -40,5 +41,34 @@ function createGrid(num) {
     }
 }
 
+
+function handleMouse () {
+    
+    const pixelGrid = document.querySelectorAll('.pixel')
+
+    pixelGrid.forEach((pixel) => {
+
+        pixel.addEventListener('mousedown', () => {
+            mouseDown = true
+            pixel.style.backgroundColor = 'white' 
+        })
+
+        pixel.addEventListener('mouseup', () => {
+            mouseDown = false
+        })
+        
+        pixel.addEventListener('mouseenter', () => {
+            if (mouseDown) {
+                pixel.style.backgroundColor = 'white' 
+            }
+        })
+
+        
+    })
+}
+
 createGrid(insertColumns ** 2)
 numberOfColumns(insertColumns)
+handleMouse()
+
+//if the mouse is down, color all divs that it enters

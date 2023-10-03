@@ -14,8 +14,16 @@ body {
     background-color: rgb(255, 255, 255);
     display: grid;
     gap: 2px;
+
 }
 
 .pixel {
     background-color: rgb(222, 201, 255);
+
+    /* eliminate dragging */
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
