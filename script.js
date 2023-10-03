@@ -5,9 +5,10 @@ let pixel
 let mouseDown = false
 let mouseEnter = false
 //_-_-_-_-_-_-_-_-_-_-_-
-let pixelSize = '40px'
-let insertColumns = 10
+let pixelSize = '5px'
+let insertColumns = 100
 let border = false
+let drawColor = 'black'
 //_-_-_-_-_-_-_-_-_-_-_-
 
 
@@ -50,7 +51,7 @@ function handleMouse () {
 
         pixel.addEventListener('mousedown', () => {
             mouseDown = true
-            pixel.style.backgroundColor = 'white' 
+            pixel.style.backgroundColor = drawColor
         })
 
         pixel.addEventListener('mouseup', () => {
@@ -59,7 +60,7 @@ function handleMouse () {
         
         pixel.addEventListener('mouseenter', () => {
             if (mouseDown) {
-                pixel.style.backgroundColor = 'white' 
+                pixel.style.backgroundColor = drawColor
             }
         })
 
@@ -71,4 +72,3 @@ createGrid(insertColumns ** 2)
 numberOfColumns(insertColumns)
 handleMouse()
 
-//if the mouse is down, color all divs that it enters
